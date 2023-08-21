@@ -15,8 +15,23 @@
 body{
     background-color: var(--light);
     font-family: "Inter", sans-serif;
-    overflow-x: hidden
+    overflow-x: hidden;
 
+}
+
+button {
+    max-width: 226px;
+    height: 32px;
+    margin-top: 5%;
+    border-radius: 100px;
+    border: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    background: var(--primary-yellow);
 }
 
 a {
@@ -112,6 +127,7 @@ ul {
       justify-content: space-between;
       transform: translateX(100%);
       transition: transform 0.3s ease-in;
+      z-index: 2;
     }
     .nav-list li {
       margin-left: 0;
@@ -211,20 +227,6 @@ ul {
 .intro p {
     margin-top: 8px;
     line-height: 30px
-}
-.intro button {
-    max-width: 226px;
-    height: 32px;
-    margin-top: 5%;
-    border-radius: 100px;
-    border: none;
-    background: var(--primary-yellow);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0.1px;
-    cursor: pointer;
 }
 
 .intro button:hover{
@@ -412,89 +414,74 @@ footer{
     .footer-social-list {
         text-align: center;
     }
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* 
-body {
-    min-width: 372px;
+.galery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout flexível */
+    gap: 20px; 
+    justify-content: center; /* Centraliza a galeria na página */
+    max-width: 1000px; /* Define uma largura máxima para a galeria */
+    margin: 0 auto; /* Centraliza a galeria horizontalmente */
 }
-
-.wrapper {
-    min-height: 100vh;
-}
-
-p.truncar-3l {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-@media screen and (max-width: 469px) {
-    .mt-xs-3 {
-        margin-top: 1rem;
-    }
-}
-
-.navbar{
-    height: 103px;
-}
-.nav-link:hover{
-    transition: 0.2s ease;
-    color: #FCC007 !important;
-}
-
-.custom-icon {
-    color: #FCC007 !important;
-}
-
-label:hover .text-dark {
-    transition: color 0.2s ease;
-    color: white !important;
-}
-
-label .text-dark {
-    transition: color 0.2s ease;
-}
-
-.btn-check:checked+.btn-outline-danger .text-dark,
-.btn-check:active+.btn-outline-danger .text-dark,
-.btn-check:hover+.btn-outline-danger .text-dark {
-    transition: color 0.2s ease;
-    color: white !important;
-}
-
-.flex-even {
-    flex: 1;
-    min-width: 300px;
-}
-
-.accordion-button:not(.collapsed) {
+.produtos-row button{
+    background: none;
+    border: solid 1px;
     color: white;
-    background-color: #dc3545;
+    padding: 4%;
+    display: flex;
+    align-items: center;
+}
+.title h3 {
+    color: white;
 }
 
-.accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");    
+.produto-image {
+    position: relative;
+    flex: 1;
+    max-width: 460px;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+}
+.produto-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 4px;
+
+}
+.produto-image:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+    cursor: pointer;
+}
+.produto-image .title {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.produto-image .title h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 100px 0 0 10px;
 }
 
-fieldset.row .form-floating>label {
-    margin-left: calc(var(--bs-gutter-x) * 0.5);
+.produto-image .title button{
+    font-weight: 700;
+    margin: 10px 30px 0 10px;
 }
 
-body {
-    background-color: #F4F0E1;
+.produtos {
+    background: white;
+}
+
+.top-title {
+    margin-left: 10vw;
+    padding: 8vh 0 8vh 0;
 }
