@@ -27,8 +27,8 @@
                 <ul class="nav-list">
                   <li><a href="index.html">Início</a></li>
                   <li><a href="Produtos.html">Produtos</a></li>
-                  <li><a href="#">Marcas</a></li>
-                  <li><a href="#">Contato</a></li>
+                  <li><a href="marcas.html">Marcas</a></li>
+                  <li><a href="contato.html">Contato</a></li>
                   <li class="search-box">                    
                     <input type="text" class="search-txt" placeholder=" Pesquisar">
                     <a href="#" class="search-btn"> <img src="./img/favicon/loupe-svgrepo-com.svg" alt="Lupa" height="20" width="20">
@@ -38,11 +38,44 @@
             </div>
         </nav>
       </header>
-
     <main>
-        <div class="container">
-            Olá Mundo!
-        </div>
+      <section class="contact">
+        <div class="form-container">
+          <ul id="form-contact">
+            <li><h2>Contato</h2></li>
+            <li>Tem dúvidas? Mande uma mensagem pelo Whatsapp ou através do formulário e te ajudaremos.</li>
+            <li><a href="https://web.whatsapp.com/send?phone=5519994244066" target="_blank">(19) 994244066</a></li>
+            <li> <a href="mailto:contato.decoramix@gmail.com">contato.decoramix@gmail.com</a></li>
+          </ul>
+
+          <form  id="form">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Ex: João Silva" class="inputs">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="email@email.com" class="inputs">
+
+            <label for="assunto">Assunto</label>
+            <input type="text" name="assunto" id="assunto" placeholder="Qual o assunto da mensagem" class="inputs">
+
+            <label for="message">Mensagem</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Descreva a sua dúvida" class="inputs"></textarea>
+
+            <button type="submit">Enviar mensagem</button>
+            <a class="whatsapp-btn" href="https://web.whatsapp.com/send?phone=5519994244066"" target="_blank"> <img class="whatsapp-icon" src="./img/favicon/icons8-whatsapp-48.png" alt="whatsapp">Nos chame no Whatsapp</a>
+          </form>
+      </div>
+      <div class="adress">
+        <ul>
+          <li><h4>Nosso endereço</h4></li>
+          <li>Venha até nossa loja e conheça nossos produtos pessoalmente.</li>
+          <li>Mapa</li>
+          <li>Rua Treze de Maio, 461 - Centro <br>
+            Piracicaba / SP <br>
+            CEP - 13.400-300</li>
+      </ul>
+      </div>
+      </section>
     </main>
     <footer>
         <div class="footer-content">
